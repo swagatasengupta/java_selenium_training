@@ -1,0 +1,54 @@
+package SeleniumTestDemo01;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class WorkingWithListOfElementsDemo {
+	private WebDriver driver;
+	private String baseUrl;
+
+	@BeforeClass
+	public void setUp() throws Exception {
+		driver = new FirefoxDriver();
+		baseUrl = "http://letskodeit.teachable.com/pages/practice";
+		
+		// Maximize the browser's window
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(baseUrl);
+	}
+
+	@Test
+	public void testListOfElements() throws Exception {
+		boolean isChecked = false;
+		List<WebElement> radioButtons = driver.findElements(
+				//By.xpath("//input[contains(@type,'radio') and contains(@name,'cars')]"));
+				By.xpath("//input[contains(@name,'cars')]")); // selects all elements which have name cars... radio buttons, check boxes, everything.
+		
+		int size = radioButtons.size();
+		System.out.println("Size of the list: " + size);
+		for (int i=0; i<size; i++) {
+			isChecked = radioButtons.get(i).isSelected();
+			
+			if (!isChecked) {
+				radioButtons.get(i).click();
+				Thread.sleep(2000);
+			}
+		}
+	}
+	
+	@AfterClass
+	public void tearDown() throws Exception {
+		Thread.sleep(2000);
+		driver.quit();
+	}
+
+}

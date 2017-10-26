@@ -1,0 +1,8 @@
+name: Extent TestSuite
+configFailurePolicy: skip
+tests:
+  - name: FireFox Test
+    classes:
+      - extentreports.Test1
+      - extentreports.Test2
+
