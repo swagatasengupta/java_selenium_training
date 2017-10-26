@@ -1,4 +1,4 @@
-package threads;
+package swagatasengupta.mavendemo1.threads;
 
 public class ThreadDemo1 implements Runnable{
 

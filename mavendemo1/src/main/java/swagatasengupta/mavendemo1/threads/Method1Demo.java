@@ -1,4 +1,4 @@
-package threads;
+package swagatasengupta.mavendemo1.threads;
 
 class Printer1 extends Thread{
 	

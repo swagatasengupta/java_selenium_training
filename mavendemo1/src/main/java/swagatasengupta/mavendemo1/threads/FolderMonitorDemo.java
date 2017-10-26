@@ -1,4 +1,4 @@
-package threads;
+package swagatasengupta.mavendemo1.threads;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
