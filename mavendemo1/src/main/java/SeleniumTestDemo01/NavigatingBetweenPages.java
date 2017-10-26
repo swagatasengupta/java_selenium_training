@@ -1,10 +1,10 @@
 package SeleniumTestDemo01;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,7 +12,7 @@ public class NavigatingBetweenPages {
 	WebDriver driver;
 	String baseUrl;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
 		baseUrl = "http://letskodeit.teachable.com/";
@@ -65,7 +65,7 @@ public class NavigatingBetweenPages {
 		System.out.println(pageSource);
 	}
 	
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		// driver.quit();
 	}

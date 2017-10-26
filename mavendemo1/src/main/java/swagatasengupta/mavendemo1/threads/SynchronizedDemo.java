@@ -12,7 +12,7 @@ public class SynchronizedDemo {
 
 		Thread t1 = new Thread(new Runnable() {
 
-			@Override
+			//@Override
 			public void run() {
 				for (int i=1;i<=1000000;i++) {
 					//System.out.println("Thread: " + Thread.currentThread().getId() + " ("+ Thread.currentThread().getName() + "): i = " + i);
@@ -26,7 +26,7 @@ public class SynchronizedDemo {
 
 		Thread t2 = new Thread(new Runnable() {
 
-			@Override
+			//@Override
 			public void run() {
 				for (int j=1;j<=1000000;j++) {
 					//System.out.println("Thread: " + Thread.currentThread().getId() + " ("+ Thread.currentThread().getName() + "): j = " + j);

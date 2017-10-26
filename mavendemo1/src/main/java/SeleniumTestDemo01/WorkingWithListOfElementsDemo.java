@@ -2,19 +2,20 @@ package SeleniumTestDemo01;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class WorkingWithListOfElementsDemo {
 	private WebDriver driver;
 	private String baseUrl;
 
-	@Before
+	@BeforeClass
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
 		baseUrl = "http://letskodeit.teachable.com/pages/practice";
@@ -44,7 +45,7 @@ public class WorkingWithListOfElementsDemo {
 		}
 	}
 	
-	@After
+	@AfterClass
 	public void tearDown() throws Exception {
 		Thread.sleep(2000);
 		driver.quit();

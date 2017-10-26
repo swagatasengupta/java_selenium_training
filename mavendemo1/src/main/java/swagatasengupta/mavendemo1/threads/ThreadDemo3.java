@@ -12,7 +12,7 @@ public class ThreadDemo3 {
 
 		Thread t1 = new Thread(new Runnable(){
 
-			@Override
+			//@Override
 			public void run() {
 				for (int i=1; i<= 1000; i++) {
 					incCount();
@@ -33,7 +33,7 @@ public class ThreadDemo3 {
 		t1.start();
 		Thread t2 = new Thread(new Runnable(){
 
-			@Override
+			//@Override
 			public void run() {
 				for (int i=1000; i>= 1; i--) {
 					if(i%2==0) {

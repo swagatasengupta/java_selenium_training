@@ -2,22 +2,22 @@ package inheritence_vehicles;
 
 public class Cycle extends Vehicle implements CycleFunctionalities {
 
-	@Override
+	//@Override
 	public void movePedals() {
 		System.out.println("Cycle pedals moved");
 	}
 
-	@Override
+	//@Override
 	public void applyBreak() {
 		System.out.println("Cycle breaks applied");
 	}
 
-	@Override
+	//@Override
 	public void releaseBreak() {
 		System.out.println("Cycle breaks released");
 	}
 
-	@Override
+	//@Override
 	public void reverseVehicle() {
 		System.out.println("Cycle -> Overridden method: Cannot reverse");
 	}

@@ -1,10 +1,10 @@
 package SeleniumTestDemo01;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class ElementDisplayedDemo {
 	String baseUrl1;
 	String baseUrl2;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
 		// Adding code for JS
@@ -61,7 +61,7 @@ public class ElementDisplayedDemo {
 		System.out.println("Child Drpdown Displayed: " + childDropdown.isDisplayed());
 	}
 	
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(2000);
 		driver.quit();

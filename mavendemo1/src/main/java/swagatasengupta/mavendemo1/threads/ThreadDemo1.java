@@ -12,7 +12,7 @@ public class ThreadDemo1 implements Runnable{
 		t.start();
 	}
 	
-	@Override
+	//@Override
 	public void run() {
 		for (int i=1; i<= 10; i++) {
 			System.out.println("Thread name: " + Thread.currentThread().getName() + 

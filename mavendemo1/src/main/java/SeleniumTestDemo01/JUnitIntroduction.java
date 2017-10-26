@@ -1,10 +1,10 @@
 package SeleniumTestDemo01;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 
 public class JUnitIntroduction {
 
@@ -18,12 +18,12 @@ public class JUnitIntroduction {
 		System.out.println("Executed after class...");
 	}
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		System.out.println("Executed before...");
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		System.out.println("Executed after...");
 	}

@@ -6,7 +6,7 @@ public class ThreadDemo2 {
 
 		Thread t1 = new Thread(new Runnable(){
 
-			@Override
+			//@Override
 			public void run() {
 				for (int i=1; i<= 100; i++) {
 					System.out.println("Thread name: " + Thread.currentThread().getName() + 
@@ -26,7 +26,7 @@ public class ThreadDemo2 {
 		t1.start();
 		Thread t2 = new Thread(new Runnable(){
 
-			@Override
+			//@Override
 			public void run() {
 				for (int i=100; i>= 1; i--) {
 					if(i%2==0) {

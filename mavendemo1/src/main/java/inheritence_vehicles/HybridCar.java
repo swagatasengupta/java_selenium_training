@@ -12,24 +12,24 @@ public class HybridCar extends Car implements FossilFuelCarFunctionalities, Elec
 		fuelType = "";
 	}
 	
-	@Override
+	//@Override
 	public void chargeCar() {
 		System.out.println("Hybrid car charging");
 		chargeLevel++;
 	}
 
-	@Override
+	//@Override
 	public void displayChargeLevel() {
 		System.out.println("Hybrid car -> charge level" + chargeLevel);
 	}
 
-	@Override
+	//@Override
 	public void fillFuel(int fuelVolume) {
 		fossilFuelLevel+=fuelVolume;
 		System.out.println("Hybrid car --> filled " + fossilFuelLevel + " litres of fossil fuel");
 	}
 
-	@Override
+	//@Override
 	public void displayFuelLevel() {
 		System.out.println("Hybrid car -> "+ this.fuelType+ " level= " + fossilFuelLevel);
 	}
@@ -37,7 +37,7 @@ public class HybridCar extends Car implements FossilFuelCarFunctionalities, Elec
 	public void setFuelType(String fuelType) {
 		this.fuelType = fuelType;
 	}
-	@Override
+	//@Override
 	public void reverseVehicle() {
 		System.out.println("Hybrid car -> Overridden grand parent function - Reversing");
 	}
