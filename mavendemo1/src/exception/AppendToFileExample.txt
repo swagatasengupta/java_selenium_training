@@ -1,0 +1,1 @@
+[20171023120512]: This is the content to write into file.
