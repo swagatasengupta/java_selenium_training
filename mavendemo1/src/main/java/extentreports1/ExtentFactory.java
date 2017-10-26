@@ -1,4 +1,4 @@
-package extentreports;
+package extentreports1;
 
 import com.relevantcodes.extentreports.ExtentReports;
 //Extent report version 2.41.2
