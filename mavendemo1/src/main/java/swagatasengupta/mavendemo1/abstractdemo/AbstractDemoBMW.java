@@ -1,4 +1,4 @@
-package abstractdemo;
+package swagatasengupta.mavendemo1.abstractdemo;
 
 public class AbstractDemoBMW extends AbstractCars {
 	

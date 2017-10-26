@@ -1,4 +1,4 @@
-package abstractdemo;
+package swagatasengupta.mavendemo1.abstractdemo;
 import java.lang.Math;
 
 public class TriangleFigure extends Figure {
