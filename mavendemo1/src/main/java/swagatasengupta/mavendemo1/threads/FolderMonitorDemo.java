@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 /*
  * This class reads a configuration file and reads which directories are to be monitored,
@@ -63,82 +64,83 @@ public class FolderMonitorDemo {
 	public static void main(String[] args) {
 
 		BufferedReader buffRdr = null;
-		//Define an array of monitors but as the number of monitors will be known only after reading configuration file
-		//the array will be initialized later. 
+		FileReader fRdr = null;
+		// Define an array of monitors but as the number of monitors will be known only
+		// after reading configuration file
+		// the array will be initialized later.
 		DirMonitor mon[];
 		try {
-			//Get line count from config file 
-			FileInputStream fstream = new FileInputStream(CONFIG_FILE_PATH);
-			buffRdr = new BufferedReader(new InputStreamReader(fstream));
-			int configFileLineCount = (int) buffRdr.lines().count();
-			System.out.println("Total lines in config life \'" + CONFIG_FILE_PATH + "\' is " + configFileLineCount);
+			// Get line count and content from config file
+			fRdr = new FileReader(CONFIG_FILE_PATH);
+			buffRdr = new BufferedReader(fRdr);
 
-			//reposition reading marker at the beginning of file to read lines one by one now,
-			// validate the lines and initiate a thread if everything is ok
-			//The assumption is that all line elements could be
-			//a valid entry and initiate monitor array with the size.
-			//But since there can be bad entries too, every entry will be validated.
-			
-			fstream.getChannel().position(0);
-			buffRdr = new BufferedReader(new InputStreamReader(fstream));
-			mon = new DirMonitor[configFileLineCount];
 			String currLine;
 			String[] currLineElems;
-
-			//This will be used for tracking how many threads successfully get created.
-			//later in the code, it will be used to join the threads to main to wait for all of them to finish.
-			int monitorThreadCounter = 0;
-
-			buffRdr = new BufferedReader(new FileReader(CONFIG_FILE_PATH));
+			ArrayList<String> arrConfigFileLines = new ArrayList<String>();
 
 			while ((currLine = buffRdr.readLine()) != null) {
-				//Check for blank line and skip if any. Continue the loop.
+
+				// Check for blank line and skip if any. Continue the loop.
 				if (currLine.trim().length() == 0) {
 					System.out.println("Blank line encountered in config file. Skipping...");
 					continue;
 				}
-				//split the line content into desired components
-				currLineElems = currLine.trim().split(CONFIG_FILE_DELIM_CHAR);
+				arrConfigFileLines.add(currLine); // only non-blank lines will be added to the arrayList.
+			}
+
+			int configFileActualLineCount = arrConfigFileLines.size();
+			System.out.println("Total non-blank lines in config life \'" + CONFIG_FILE_PATH + "\' is "
+					+ configFileActualLineCount);
+			mon = new DirMonitor[configFileActualLineCount];
+
+			// This will be used for tracking how many threads successfully get created.
+			// later in the code, it will be used to join the threads to main to wait for
+			// all of them to finish.
+			int monitorThreadCounter = 0;
+
+			for (String line : arrConfigFileLines) {
+				// split the line content into desired components
+				currLineElems = line.trim().split(CONFIG_FILE_DELIM_CHAR);
 
 				try {
-					//try to initialize new thread with values read. if everything is OK, thread will get started
-					//or else exception will be caught
+					// try to initialize new thread with values read. if everything is OK, thread
+					// will get started
+					// or else exception will be caught
 					mon[monitorThreadCounter] = new DirMonitor(currLineElems[CONFIG_FILE_POS_FOLDER].trim(),
 							Long.parseLong(currLineElems[CONFIG_FILE_POS_DURATION].trim()),
 							Long.parseLong(currLineElems[CONFIG_FILE_POS_INTERVAL].trim()));
 					mon[monitorThreadCounter].start();
 					monitorThreadCounter++;
 				} catch (NumberFormatException e) {
-					System.out.println("Number format exception occured in line: \'" + currLine
+					System.out.println("Number format exception occured in line: \'" + line
 							+ "\' bad entry in config file. Skipping...");
-					continue;//skip the bad entry and continue the loop.
+					continue;// skip the bad entry and continue the loop.
 				} catch (ArrayIndexOutOfBoundsException e) {
-					System.out.println("Array out of bound exception occured in line: \'" + currLine
+					System.out.println("Array out of bound exception occured in line: \'" + line
 							+ "\' bad entry in config file. Skipping...");
-					continue;//skip the bad entry and continue the loop.
-				}
-			}
-
-			{
-				//join all the threads using a loop.
-				for (int i = 0; i < monitorThreadCounter; i++) {
-					mon[i].join();
-
+					continue;// skip the bad entry and continue the loop.
 				}
 
-				//display the values of total files and directories added or removed.
-				System.out.println("Total Files Added: " + FolderMonitorDemo.TotalFilesAdded);
-				System.out.println("Total Files Removed: " + FolderMonitorDemo.TotalFilesRemoved);
-				System.out.println("Total Directories Added: " + FolderMonitorDemo.TotalDirsAdded);
-				System.out.println("Total Directories Removed: " + FolderMonitorDemo.TotalDirsRemoved);
+			} // end of for loop to read line for each arrConfigLines
+
+			// join all the threads using a loop.
+			for (int i = 0; i < monitorThreadCounter; i++) {
+				mon[i].join();
 
 			}
+
+			// display the values of total files and directories added or removed.
+			System.out.println("Total Files Added: " + FolderMonitorDemo.TotalFilesAdded);
+			System.out.println("Total Files Removed: " + FolderMonitorDemo.TotalFilesRemoved);
+			System.out.println("Total Directories Added: " + FolderMonitorDemo.TotalDirsAdded);
+			System.out.println("Total Directories Removed: " + FolderMonitorDemo.TotalDirsRemoved);
+
 
 		} catch (Exception e) {
 			e.toString();
 		} finally {
 			try {
-				//close buffered reader
+				// close buffered reader
 				if (buffRdr != null)
 					buffRdr.close();
 			} catch (IOException e) {
