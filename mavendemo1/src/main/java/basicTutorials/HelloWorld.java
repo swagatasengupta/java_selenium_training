@@ -2,11 +2,11 @@ package basicTutorials;
 
 public class HelloWorld {
 
-	 String name = "Swagat";
+	 String name = "Umika Sengupta";
 	
 	public static void main(String[] args) {
-		//TODO Auto-generated method stub
+		
 		HelloWorld hi = new HelloWorld();
-		System.out.println("Hello World" + hi.name);
+		System.out.println("Hello World " + hi.name);
 	}
 }
