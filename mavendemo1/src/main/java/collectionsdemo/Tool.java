@@ -10,9 +10,15 @@ public class Tool {
 	ArrayList<String> supportedOSs;
 	ArrayList<String> supportedBrowsers;
 	ArrayList<String> supportedCITools;
+	ArrayList<String> supportedTechnologies;
 	int easeOfLearning;
 	int easeOfCollaboration;
+	int levelOfDocumentationAvail;
+	
 	boolean primaryRecommendation;
 	boolean secondaryRecommendation;
 
+	public boolean isProgLangSupported(String lang){
+		return true;
+	}
 }
