@@ -15,6 +15,12 @@
 	</properties>
 
 	<dependencies>
+		<!-- appium java client: https://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.appium%20a%3Ajava-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>5.0.4</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
