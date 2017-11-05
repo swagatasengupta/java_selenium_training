@@ -6,15 +6,15 @@ import java.io.IOException;
 
 import com.lib.util.TimeUtil;
 
-
+import com.lib.util.FileUtil;
 
 
 public class Temp {
 
 	public static void main(String[] args) {
-		System.out.println(TimeUtil.getTimeStamp());
-		System.out.println(TimeUtil.getTimeStamp("HH-mm-ss-SS, dd/MMM/yyyy"));
-		
+		//System.out.println(TimeUtil.getTimeStamp());
+		//System.out.println(TimeUtil.getTimeStamp("HH-mm-ss-SS, dd/MMM/yyyy"));
+		FileUtil.copyAllFiles("E:\\test_e", "F:\\Music\\Mashups", false);
 /*		FileUtil.moveFile("E:\\test_e\\test1.txt", "F:\\Music\\Mashups", true);
 		FileUtil.moveFile("E:\\test_e\\test2.txt", "F:\\Music\\Mashups", "test123.txt", true);
 		FileUtil.moveFile("E:\\test_e\\test3.txt", "F:\\Music\\Mashups", true);*/
@@ -42,37 +42,5 @@ public class Temp {
 		}	
 */
 	}
-	private static boolean cleanUpEmptyDirectoryHeirarchy(String parentDirPath) {
 
-		File[] files = new File(parentDirPath).listFiles();
-		if(files.length == 0) {
-			return new File(parentDirPath).delete();
-		}
-		for (File f : files) {
-			if(f.isDirectory()) {
-				cleanUpEmptyDirectoryHeirarchy(f.getAbsolutePath());
-			} else {
-				return false;
-			}
-		}
-		return true;
-	}
-	private static void delete(File f) throws IOException {
-		  if (f.isDirectory()) {
-		    for (File c : f.listFiles())
-		      delete(c);
-		  }
-		  if (!f.delete())
-		    throw new IOException("Failed to delete file: " + f);
-		}
-    private static boolean deleteRecursive(File path) throws FileNotFoundException{
-        if (!path.exists()) throw new FileNotFoundException(path.getAbsolutePath());
-        boolean ret = true;
-        if (path.isDirectory()){
-            for (File f : path.listFiles()){
-                ret = ret && deleteRecursive(f);
-            }
-        }
-        return ret && path.delete();
-    }
 }
