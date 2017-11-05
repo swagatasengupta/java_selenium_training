@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.lib.genWeb.UIWebDriver;
+import com.lib.genWeb.SelWebDriverUtil;
 
 
 public class BasicElementActions {
@@ -22,7 +22,7 @@ public class BasicElementActions {
 	String pageHeaderText = null;
 	@BeforeClass
 	public void setUp() throws Exception {
-		driver = new UIWebDriver("chrome",maximizeWindow,20).getBrowser();
+		driver = new SelWebDriverUtil().getBrowser("chrome",maximizeWindow,20);
 		baseUrl = "http://automationpractice.com/index.php";
 	}
 	

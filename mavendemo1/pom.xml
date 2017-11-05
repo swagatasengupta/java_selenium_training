@@ -58,4 +58,32 @@
 
 
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>WebUITests</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.18.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/java/com/test/mystore/testng_mystore_webui_smoke.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.1</version>
+						<configuration>
+							<fork>true</fork>
+							<executable>C:\Program Files\Java\jdk1.8.0_144\bin\javac.exe</executable>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

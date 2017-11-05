@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="SeleniumTestDemo01.WorkingWithListOfElementsDemo"/>
+<!--       <class name="SeleniumTestDemo01.WorkingWithListOfElementsDemo"/>
       <class name="SeleniumTestDemo01.ElementDisplayedDemo"/>
       <class name="SeleniumTestDemo01.GetTextDemo"/>
       <class name="SeleniumTestDemo01.JUnitIntroduction"/>
@@ -17,7 +17,7 @@
       <class name="SeleniumTestDemo01.ImplicitWaitDemo"/>
       <class name="SeleniumTestDemo01.DropdownSelectDemo"/>
       <class name="SeleniumTestDemo01.ElementStateDemo"/>
-      <class name="SeleniumTestDemo01.NavigatingBetweenPages"/>
+      <class name="SeleniumTestDemo01.NavigatingBetweenPages"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

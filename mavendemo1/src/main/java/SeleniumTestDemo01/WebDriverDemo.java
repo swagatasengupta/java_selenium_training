@@ -1,9 +1,8 @@
 package SeleniumTestDemo01;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.lib.genWeb.UIWebDriver;
+import com.lib.genWeb.SelWebDriverUtil;
 
 public class WebDriverDemo {
 
@@ -12,16 +11,16 @@ public class WebDriverDemo {
 	
 */	
 	public static void main(String[] args) {
-		UIWebDriver chromedrv = new UIWebDriver("chrome",true);
+		SelWebDriverUtil chromedrv = new SelWebDriverUtil();
 		WebDriver drv1;
-		drv1 = chromedrv.getBrowser();
+		drv1 = chromedrv.getBrowser("chrome",true);
 		drv1.get("http://www.facebook.com");
 
-		UIWebDriver mozdrv = new UIWebDriver("mozilla",false);
-		mozdrv.getBrowser().get("http://www.seleniumhq.org");
+		SelWebDriverUtil mozdrv = new SelWebDriverUtil();
+		mozdrv.getBrowser("mozilla",false).get("http://www.seleniumhq.org");
 
-		UIWebDriver iedrv = new UIWebDriver("IE",false);
-		iedrv.getBrowser().get("http://www.netelixir.com");
+		SelWebDriverUtil iedrv = new SelWebDriverUtil();
+		iedrv.getBrowser("IE",false).get("http://www.netelixir.com");
 
 	}
 
