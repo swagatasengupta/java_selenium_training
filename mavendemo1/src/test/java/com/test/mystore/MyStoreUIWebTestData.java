@@ -1,4 +1,4 @@
-package com.test.mystore.ui_tests;
+package com.test.mystore;
 
 import org.testng.annotations.DataProvider;
 
