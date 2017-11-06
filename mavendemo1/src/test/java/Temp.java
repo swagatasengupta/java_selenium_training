@@ -4,17 +4,26 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.IInvokedMethod;
+import org.testng.IInvokedMethodListener;
+import org.testng.ITestResult;
+
 import com.lib.util.TimeUtil;
 
 import com.lib.util.FileUtil;
 
 
 public class Temp {
+private static Logger log = LogManager.getLogger(Temp.class.getName());
 
 	public static void main(String[] args) {
+		log.fatal("message");
+		//
 		//System.out.println(TimeUtil.getTimeStamp());
 		//System.out.println(TimeUtil.getTimeStamp("HH-mm-ss-SS, dd/MMM/yyyy"));
-		FileUtil.copyAllFiles("E:\\test_e", "F:\\Music\\Mashups", false);
+		//FileUtil.copyAllFiles("E:\\test_e", "F:\\Music\\Mashups", false);
 /*		FileUtil.moveFile("E:\\test_e\\test1.txt", "F:\\Music\\Mashups", true);
 		FileUtil.moveFile("E:\\test_e\\test2.txt", "F:\\Music\\Mashups", "test123.txt", true);
 		FileUtil.moveFile("E:\\test_e\\test3.txt", "F:\\Music\\Mashups", true);*/

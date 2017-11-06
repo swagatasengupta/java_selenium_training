@@ -1,7 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="MyStore WebUI TestSuite" parallel="tests" thread-count="2">
-
-	<test name="Smoke">
+<suite name="MyStore WebUI TestSuite" parallel="tests"
+	thread-count="2">
+<!-- 	<listeners>
+		<listener class-name="com.test.mystore.MyStoreTestNGListener"></listener>
+		<listener class-name="com.test.mystore.WebDriverEventListener"></listener>
+	</listeners> -->
+	<test name="Smoke-Chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.test.mystore.ui_tests.Login_Logout"></class>
@@ -9,11 +13,13 @@
 			<class name="com.test.mystore.ui_tests.MyAcctLinkNavigations"></class>
 		</classes>
 	</test>
-<!-- 	<test name="Create Address">
+
+	<test name="Smoke-Mozilla">
 		<parameter name="browser" value="mozilla"></parameter>
 		<classes>
+			<class name="com.test.mystore.ui_tests.Login_Logout"></class>
 			<class name="com.test.mystore.ui_tests.CreateAddress"></class>
+			<class name="com.test.mystore.ui_tests.MyAcctLinkNavigations"></class>
 		</classes>
 	</test>
- -->
- </suite>
+</suite>

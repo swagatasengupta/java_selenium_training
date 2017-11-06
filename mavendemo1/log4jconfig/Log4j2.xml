@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
-		<Property name="basePath">E:\\eclipse\\Work-Space\\SeleniumTraining01\\src\\logging\\</Property>
+		<!-- <Property name="basePath">E:\\GIT\\java_selenium_training\\mavendemo1\\src\\test\\java\\com\\result\\logs</Property> -->
+		<Property name="basePath">./src/test/java/com/result/logs</Property>
 	</Properties>
 	<Appenders>
-		<RollingFile name="File" fileName="${basePath}/app.log" filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %c{2} -%msg%n"/>
+		<RollingFile name="File" fileName="${basePath}/MyStoreApp.log" filePattern="${basePath}/MyStoreApp-%d{yyyy-MMM-dd}.log">
+			<PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level %c{2} -%msg%n"/>
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
 				<SizeBasedTriggeringPolicy size="100 KB"/>
 			</Policies>
 		</RollingFile>
 		<Console name="Console">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %c{1} -%msg%n"/>
+			<PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level %c{2} -%msg%n"/>
 		</Console>
 	</Appenders>
 	<Loggers>
@@ -23,6 +24,9 @@
 			<AppenderRef ref="File"/>
 		</Logger>
 		<Logger name="SeleniumTestDemo01" level="debug" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
+		<Logger name="mystore" level="trace" additivity="false">
 			<AppenderRef ref="File"/>
 		</Logger>
 	</Loggers>

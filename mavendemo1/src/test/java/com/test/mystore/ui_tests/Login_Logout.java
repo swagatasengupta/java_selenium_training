@@ -24,7 +24,7 @@ public class Login_Logout extends MyStoreUIWebBase {
 	@BeforeMethod
 	@Parameters({ "browser" })
 	public void beforeMethod(String browser) {
-		
+
 		driver = SelWebDriverUtil.getBrowser(browser, true);
 		prop = PropUtil.getProp("MYSTORE");
 		driver.get(prop.getProperty("myStoreURL"));
@@ -34,9 +34,16 @@ public class Login_Logout extends MyStoreUIWebBase {
 	public void t01_Login() {
 		String pageTextToVerify = driver.findElement(By.cssSelector("#editorial_block_center>h1")).getText();
 		sAssert.assertEquals(pageTextToVerify, "Automation Practice Website");
+		/*
+		 * boolean val = MyStoreReusableFunctions.myStore_Login(driver,
+		 * prop.getProperty("userName"), prop.getProperty("encodedPassword")); if(val) {
+		 * System.out.println("Login successful"); }
+		 * Assert.assertTrue(val);
+		 */
 		Assert.assertTrue(MyStoreReusableFunctions.myStore_Login(driver, prop.getProperty("userName"),
 				prop.getProperty("encodedPassword")));
 		// check my account page is displayed
+		
 		Assert.assertEquals(driver.findElement(By.className("page-heading")).getText(), "MY ACCOUNT");
 		sAssert.assertAll();
 	}
