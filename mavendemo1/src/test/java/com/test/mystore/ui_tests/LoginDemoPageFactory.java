@@ -1,5 +1,6 @@
 package com.test.mystore.ui_tests;
 
+import java.util.Base64;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -37,9 +38,18 @@ public class LoginDemoPageFactory {
 
 	@Test
 	public void t01_LoginPageFactoryDemo() {
-		Assert.assertTrue(homePage.clickSignIn());
+	
+		homePage.signInLink.click();
+		homePage.clickSignIn();
+		loginPage.username.clear();
+		loginPage.username.sendKeys(prop.getProperty("userName"));
+		loginPage.password.clear();
+		String decodedPwd = new String(Base64.getDecoder().decode(prop.getProperty("encodedPassword")));
+		loginPage.password.sendKeys(decodedPwd);
+		loginPage.submit.click();
+		/*Assert.assertTrue(homePage.clickSignIn());
 		Assert.assertTrue(loginPage.login(prop.getProperty("userName"),
-				prop.getProperty("encodedPassword")));
+				prop.getProperty("encodedPassword")));*/
 	}
 
 	@AfterMethod
