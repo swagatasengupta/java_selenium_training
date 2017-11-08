@@ -9,7 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.lib.genWeb.SelWebDriverUtil;
 
 public class MyStoreDemo1 {
 	public WebDriver drv;
@@ -18,7 +17,7 @@ public class MyStoreDemo1 {
 	public void beforeClass() {
 /*		UIWebDriver uidriver = new UIWebDriver("chrome",true,20);
 		drv = uidriver.getBrowser();*/
-		drv = new SelWebDriverUtil().getBrowser("chrome",true,20);
+		//drv = new SelWebDriverUtil().getBrowser("chrome",true,20);
 		drv.get("http://automationpractice.com/index.php");
 	}
 

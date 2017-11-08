@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.lib.util.TimeUtil;
+
 
 
 
@@ -12,9 +12,9 @@ import com.lib.util.TimeUtil;
 public class Temp {
 
 	public static void main(String[] args) {
-		System.out.println(TimeUtil.getTimeStamp());
+/*		System.out.println(TimeUtil.getTimeStamp());
 		System.out.println(TimeUtil.getTimeStamp("HH-mm-ss-SS, dd/MMM/yyyy"));
-		
+*/		
 /*		FileUtil.moveFile("E:\\test_e\\test1.txt", "F:\\Music\\Mashups", true);
 		FileUtil.moveFile("E:\\test_e\\test2.txt", "F:\\Music\\Mashups", "test123.txt", true);
 		FileUtil.moveFile("E:\\test_e\\test3.txt", "F:\\Music\\Mashups", true);*/
