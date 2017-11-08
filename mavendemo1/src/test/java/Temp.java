@@ -11,15 +11,49 @@ import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 
 import com.lib.util.TimeUtil;
-
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.lib.util.FileUtil;
+import com.lib.util.PathUtil;
 
 
 public class Temp {
 private static Logger log = LogManager.getLogger(Temp.class.getName());
 
 	public static void main(String[] args) {
-		log.fatal("message");
+
+		
+		if("beforeClass".toUpperCase().matches(".*BEFORE.*CLASS.*")) System.out.println("Before Class Called");
+		if("beforeMyStoreUIWebClass".toUpperCase().matches(".*BEFORE.*CLASS.*")) System.out.println("Before Class Called");
+		if("AfterMethod".toUpperCase().matches(".*AFTER.*CLASS.*")) System.out.println("After Class Called");
+		
+		
+/*				String extentPath;
+		ExtentReports extRep;
+		ExtentTest extTest;
+		ExtentTest extTest2, extTest3;
+		extentPath = PathUtil.getPath("FRW_BASE")
+				+ PathUtil.getPath("MYSTORE_EXTENT_REP_PATH")
+				+ TimeUtil.getTimeStamp()
+				+ ".html";
+		extRep = new ExtentReports(extentPath, false);
+		extRep.addSystemInfo("Selenium Version", "2.52");
+		extRep.addSystemInfo("Platform", "Windows");
+		//extRep.addSystemInfo("OS: ", System.getenv("os.name"));
+		extTest = extRep.startTest("Started test");
+		extTest.log(LogStatus.INFO, "some info");
+		extTest2 = extRep.startTest("Started test 1.1");
+		extTest.appendChild(extTest2);
+		extTest2.log(LogStatus.PASS, "child 1.1 test passed");
+		extTest3 = extRep.startTest("Started test 1.2");
+		extTest3.log(LogStatus.FAIL, "child 1.2 test failed");
+		extTest.appendChild(extTest3);
+		extTest.log(LogStatus.PASS, "some pass");
+		extTest.log(LogStatus.FAIL, "some fail");
+		extRep.endTest(extTest);
+		extRep.flush();
+*/		//log.fatal("message");
 		//
 		//System.out.println(TimeUtil.getTimeStamp());
 		//System.out.println(TimeUtil.getTimeStamp("HH-mm-ss-SS, dd/MMM/yyyy"));

@@ -20,7 +20,7 @@ public class PropUtil {
 		default: return null;
 		}
 		
-		System.out.println("Framework base folder: " + frameworkBaseFolder);
+		LogUtil.log("TRACE", "Framework base folder: " + frameworkBaseFolder);
 		try {
 			fis = new FileInputStream(frameworkBaseFolder + configFilePath);
 			prop.load(fis);
@@ -29,8 +29,7 @@ public class PropUtil {
 			e.printStackTrace();
 			return null;
 		} catch (IOException e) {
-			System.out.println("IO exception occured while loading properties file: " + configFilePath);
-			e.printStackTrace();
+			LogUtil.log("ERROR", "IO exception occured while loading properties file: " + configFilePath, e);
 			return null;
 		}
 		return prop;

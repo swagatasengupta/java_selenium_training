@@ -3,7 +3,8 @@ package com.lib.util;
 public class PathUtil {
 	private static final String MASTER_CONFIG_FILE_PATH = "\\com\\config\\master_config.properties";
 	private static final String MYSTORE_CONFIG_FILE_PATH = "\\com\\test\\mystore\\mystore.properties";
-
+	private static final String MYSTORE_EXTENT_REP_PATH = "\\com\\result\\MyStore_ExtentReport_";
+	
 	public static String getPath(String pathCode) {
 
 		switch (pathCode.trim().toUpperCase()) {
@@ -13,6 +14,8 @@ public class PathUtil {
 			return MYSTORE_CONFIG_FILE_PATH;
 		case "FRW_BASE":
 			return System.getenv("LXR_TEST_AUT_FRW");
+		case "MYSTORE_EXTENT_REP_PATH":
+			return MYSTORE_EXTENT_REP_PATH;
 		default:
 			return null;
 		}

@@ -1,4 +1,4 @@
-package com.test.mystore;
+package com.lib.util.listeners;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
  * eDriver.get(baseUrl);
  * eDriver.findElement(By.id("tab-flight-tab")).click();*/
 
-public class MyStoreWebDriverListener implements WebDriverEventListener {
+public class UIWebDriverListener implements WebDriverEventListener {
 
 	@Override
 	public void afterAlertAccept(WebDriver arg0) {

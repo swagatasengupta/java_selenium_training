@@ -1,105 +1,127 @@
 package com.test.mystore.ui_tests;
 
-import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.lib.genWeb.SelWebDriverUtil;
-import com.lib.myStoreAppLib.MyStoreReusableFunctions;
+import com.lib.util.LogUtil;
 import com.lib.util.PropUtil;
-import com.test.mystore.MyStoreUIWebBase;
+import com.lib.util.extent.ExtentManager;
+import com.lib.util.extent.ExtentTestManager;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
+import com.test.mystore.BaseTest;
+import com.test.mystore.pageobjects.MyStore_CommonPage;
+import com.test.mystore.pageobjects.MyStore_HomePage;
+import com.test.mystore.pageobjects.MyStore_LoginPage;
+import com.test.mystore.pageobjects.MyStore_MyAccountPage;
 
-public class MyAcctLinkNavigations extends MyStoreUIWebBase {
+public class MyAcctLinkNavigations extends BaseTest {
+	WebDriver driver;
 
 	String addrAlias;
-	WebDriver driver;
 	Properties prop;
-	SoftAssert sAssert;
 
+	MyStore_HomePage hp;// = new MyStore_HomePage(driver);;
+	MyStore_LoginPage lgn;// = new MyStore_LoginPage(driver);
+	MyStore_CommonPage cmn;// = new MyStore_CommonPage(driver);
+	MyStore_MyAccountPage myacc;// = new MyStore_MyAccountPage(driver);
+
+	ExtentReports extent = ExtentManager.getReporter();
+	
+	boolean retVal = true;
+	
 	@BeforeMethod
 	@Parameters({ "browser" })
 	public void beforeMethod(String browser) {
 		driver = SelWebDriverUtil.getBrowser(browser, true);
+		super.driver = this.driver;
 		prop = PropUtil.getProp("MYSTORE");
-		driver.get(prop.getProperty("myStoreURL"));
-		sAssert = new SoftAssert();
+		hp = new MyStore_HomePage(driver);;
+		lgn = new MyStore_LoginPage(driver);
+		cmn = new MyStore_CommonPage(driver);
+		myacc = new MyStore_MyAccountPage(driver);
 	}
 
 	@Test
 	public void t01_goToMyAccountLinks() {
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_Login(driver, prop.getProperty("userName"),
-				prop.getProperty("encodedPassword")));
-		List<WebElement> myAccLinks = driver.findElements(By.cssSelector(".myaccount-link-list>li>a"));
-		System.out.println(myAccLinks.size() + " links found under myAccLinks under class myaccount-link-list");
+	
+		try {
+			
+		retVal = hp.openHomePage(prop.getProperty("myStoreURL"));
+		Assert.assertTrue(retVal);
+
+		retVal = hp.clickSignIn();
+		Assert.assertTrue(retVal);
+
+		retVal = lgn.login(prop.getProperty("userName"), prop.getProperty("encodedPassword"));
+		Assert.assertTrue(retVal);
+
 
 		//Go to order history page, verify page header and come back 
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_MyAccountNavigation(driver, "ORDER_HISTORY"));
-		sAssert.assertEquals(driver.findElement(By.cssSelector(".navigation_page")).getText().trim(), "Order history");
-		driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
+
+		retVal = myacc.myAccountNavigation("ORDER_HISTORY");
+		LogUtil.log("INFO", "Successfully logged in as " + prop.getProperty("userName")
+		+ " clicked on Order History on My Account page");
+
+		Assert.assertTrue(retVal);
+		String navigationPageText = cmn.elem_navigationPage.getText().trim();
+		Assert.assertEquals(navigationPageText, "Order history");
+		cmn.btn_backToMyAccount.click();
+		LogUtil.log("PASS",  "Successfully navigated to Order History page and navigated back to My Account page");
 		
 		//Go to order history page, verify page header and come back 
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_MyAccountNavigation(driver, "CREDIT_SLIPS"));
-		sAssert.assertEquals(driver.findElement(By.cssSelector(".navigation_page")).getText().trim(), "Credit slips");
-		driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
+		retVal = myacc.myAccountNavigation("CREDIT_SLIPS");
+		Assert.assertTrue(retVal);
+		navigationPageText = cmn.elem_navigationPage.getText().trim();
+		Assert.assertEquals(navigationPageText, "Credit slips");
+		cmn.btn_backToMyAccount.click();
+		LogUtil.log("PASS",  "Successfully navigated to Credit Slips page and navigated back to My Account page");
 
 		//Go to addresses page, verify page header and come back 
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_MyAccountNavigation(driver, "ADDRESSES"));
-		sAssert.assertEquals(driver.findElement(By.cssSelector(".navigation_page")).getText().trim(), "My addresses");
-		driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
+		retVal = myacc.myAccountNavigation("ADDRESSES");
+		Assert.assertTrue(retVal);
+		navigationPageText = cmn.elem_navigationPage.getText().trim();
+		Assert.assertEquals(navigationPageText, "My addresses");
+		cmn.btn_backToMyAccount.click();
+		LogUtil.log("PASS", "Successfully navigated to My Addresses page and navigated back to My Account page");
 
 		//Go to personal information page, verify page header and come back 
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_MyAccountNavigation(driver, "PERSONAL_INFORMATION"));
-		sAssert.assertEquals(driver.findElement(By.cssSelector(".navigation_page")).getText().trim(), "Your personal information");
-		driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
+		retVal = myacc.myAccountNavigation("PERSONAL_INFORMATION");
+		Assert.assertTrue(retVal);
+		navigationPageText = cmn.elem_navigationPage.getText().trim();
+		Assert.assertEquals(navigationPageText, "Your personal information");
+		cmn.btn_backToMyAccount.click();
+		LogUtil.log("PASS", "Successfully navigated to Personal Information page and navigated back to My Account page");
 		
 		//Go to wishlist page, verify page header and come back 
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_MyAccountNavigation(driver, "WISHLIST"));
-		sAssert.assertEquals(driver.findElement(By.cssSelector(".navigation_page")).getText().trim(), "My wishlists");
-		driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
+		retVal = myacc.myAccountNavigation("WISHLIST");
+		Assert.assertTrue(retVal);
+		navigationPageText = cmn.elem_navigationPage.getText().trim();
+		Assert.assertEquals(navigationPageText, "My wishlists");
+		cmn.btn_backToMyAccount.click();
+		LogUtil.log("PASS", "Successfully navigated to My wishlists page and navigated back to My Account page");
 		
-		sAssert.assertAll();
-		
-		/*		for (int i=0; i< myAccLinks.size(); i++) {
-			myAccLinks.get(i).click();
-			System.out.println(driver.findElement(By.className("navigation_page")).getText());
-			driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
-			try {
-				Thread.sleep(2 * 1000);
-			} catch (Exception e) {
-				e.printStackTrace();
-			} 		
-		}*/
-/*		for (WebElement elem : myAccLinks ) {
-			elem.click();
-			System.out.println(driver.findElement(By.className("navigation_page")).getText());
-			driver.findElement(By.xpath("//li/a[contains(@href,'controller=my-account')]")).click();
-			try {
-				Thread.sleep(2 * 1000);
-			} catch (Exception e) {
-				e.printStackTrace();
-			} 		
+		} catch (Exception e) {
+			LogUtil.log("ERROR", "Error occured in " + this.getClass().getName(), e);
 		}
-*/	
+
 	}
 
 	@AfterMethod
 	public void logoutAndClose() {
 		try { 
-			MyStoreReusableFunctions.myStore_logOut(driver);
+			retVal = cmn.logout();
+			Assert.assertTrue(retVal);
 			Thread.sleep(Long.parseLong(prop.getProperty("GLOBAL_WAIT_BEFORE_BROWSER_CLOSE")) * 1000);
 		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			driver.quit();
+			LogUtil.log("ERROR", "Error occured while logging out " + this.getClass().getName(), e);
 		}
 
 	}

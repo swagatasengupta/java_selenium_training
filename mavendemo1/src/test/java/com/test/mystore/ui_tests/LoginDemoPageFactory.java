@@ -41,12 +41,12 @@ public class LoginDemoPageFactory {
 	
 		homePage.signInLink.click();
 		homePage.clickSignIn();
-		loginPage.username.clear();
-		loginPage.username.sendKeys(prop.getProperty("userName"));
-		loginPage.password.clear();
+		loginPage.inp_userName.clear();
+		loginPage.inp_userName.sendKeys(prop.getProperty("userName"));
+		loginPage.inp_password.clear();
 		String decodedPwd = new String(Base64.getDecoder().decode(prop.getProperty("encodedPassword")));
-		loginPage.password.sendKeys(decodedPwd);
-		loginPage.submit.click();
+		loginPage.inp_password.sendKeys(decodedPwd);
+		loginPage.btn_submit.click();
 		/*Assert.assertTrue(homePage.clickSignIn());
 		Assert.assertTrue(loginPage.login(prop.getProperty("userName"),
 				prop.getProperty("encodedPassword")));*/
@@ -54,7 +54,7 @@ public class LoginDemoPageFactory {
 
 	@AfterMethod
 	public void closeBrowser() {
-		MyStoreReusableFunctions.myStore_logOut(driver);
+		//MyStoreReusableFunctions.myStore_logOut(driver);
 		driver.quit();
 	}
 

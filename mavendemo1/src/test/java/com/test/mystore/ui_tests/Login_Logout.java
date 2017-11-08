@@ -9,56 +9,87 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.lib.genWeb.SelWebDriverUtil;
-import com.lib.myStoreAppLib.MyStoreReusableFunctions;
+import com.lib.util.LogUtil;
 import com.lib.util.PropUtil;
-import com.test.mystore.MyStoreUIWebBase;
+import com.lib.util.extent.ExtentManager;
+import com.lib.util.extent.ExtentTestManager;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
+import com.test.mystore.BaseTest;
+import com.test.mystore.pageobjects.MyStore_CommonPage;
+import com.test.mystore.pageobjects.MyStore_HomePage;
+import com.test.mystore.pageobjects.MyStore_LoginPage;
 
-public class Login_Logout extends MyStoreUIWebBase {
-	SoftAssert sAssert = new SoftAssert();
+public class Login_Logout extends BaseTest {
 	WebDriver driver;
 	Properties prop;
+	ExtentReports extent = ExtentManager.getReporter();
+
+	MyStore_HomePage hp;// = new MyStore_HomePage(driver);;
+	MyStore_LoginPage lgn;//= new MyStore_LoginPage(driver);
+	MyStore_CommonPage cmn;// = new MyStore_CommonPage(driver);
+
+	boolean retVal = true;
 
 	@BeforeMethod
 	@Parameters({ "browser" })
 	public void beforeMethod(String browser) {
-
 		driver = SelWebDriverUtil.getBrowser(browser, true);
+		super.driver = this.driver;
 		prop = PropUtil.getProp("MYSTORE");
-		driver.get(prop.getProperty("myStoreURL"));
+		hp = new MyStore_HomePage(driver);;
+		lgn= new MyStore_LoginPage(driver);
+		cmn = new MyStore_CommonPage(driver);
 	}
 
 	@Test
 	public void t01_Login() {
-		String pageTextToVerify = driver.findElement(By.cssSelector("#editorial_block_center>h1")).getText();
-		sAssert.assertEquals(pageTextToVerify, "Automation Practice Website");
-		/*
-		 * boolean val = MyStoreReusableFunctions.myStore_Login(driver,
-		 * prop.getProperty("userName"), prop.getProperty("encodedPassword")); if(val) {
-		 * System.out.println("Login successful"); }
-		 * Assert.assertTrue(val);
-		 */
-		Assert.assertTrue(MyStoreReusableFunctions.myStore_Login(driver, prop.getProperty("userName"),
-				prop.getProperty("encodedPassword")));
-		// check my account page is displayed
 		
-		Assert.assertEquals(driver.findElement(By.className("page-heading")).getText(), "MY ACCOUNT");
-		sAssert.assertAll();
-	}
+		try {
+			hp.openHomePage(prop.getProperty("myStoreURL"));
+			
+			String pageTextToVerify = hp.elemEditorialBlockCenterHeading.getText();
+			LogUtil.log("INFO",  "Home page text to verify: " + pageTextToVerify);
+			//Check message on home page.
+			Assert.assertEquals(pageTextToVerify, "Automation Practice Website");
+			LogUtil.log("PASS",   "Verified \"Automation Practice Website\" text on home page");
+			
+			hp.signInLink.click();
+			LogUtil.log("INFO",  "Clicked on Sign in on home page");
+			
+			
+			retVal = lgn.login(prop.getProperty("userName"), prop.getProperty("encodedPassword"));
+			Assert.assertTrue(retVal);
 
-	public void t02_Logout() {
-		sAssert.assertTrue(driver.findElement(By.className("logout")).isDisplayed());
-		driver.findElement(By.className("logout")).click();
-		// check that it comes back to login page
-		Assert.assertEquals(driver.findElement(By.className("page-heading")).getText(), "AUTHENTICATION");
-		sAssert.assertAll();
+			// check my account page is displayed
+			
+			
+			String actMyAccPageHeader = cmn.elem_pageHeading.getText();
+			Assert.assertEquals(actMyAccPageHeader, "MY ACCOUNT");
+			LogUtil.log("PASS", "Logged in to the application successfully as "
+			+ prop.getProperty("userName")
+			+ " and verified MY ACCOUNT page is displayed");
+
+			boolean isLogoutDisplayed = cmn.lnk_signOut.isDisplayed();
+			Assert.assertTrue(isLogoutDisplayed);
+			Assert.assertTrue(cmn.logout());
+			LogUtil.log("PASS", "Logout link displayed and was clicked.");
+			// check that it comes back to login page
+			String actAuthPageHeader = cmn.elem_pageHeading.getText();
+			Assert.assertEquals(actAuthPageHeader, "AUTHENTICATION");
+			LogUtil.log("PASS", "After logout, authentication page was displayed.");
+
+			
+		} catch (Exception e) {
+			
+			LogUtil.log("ERROR", "Exception occured while logging in." + this.getClass().getName(), e);
+		}
 	}
 
 	@AfterMethod
-	public void closeBrowser() {
-		driver.quit();
+	public void afterMethod() {
 	}
 
 }
