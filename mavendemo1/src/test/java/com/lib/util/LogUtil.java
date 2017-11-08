@@ -2,7 +2,7 @@ package com.lib.util;
 
 import com.lib.util.extent.ExtentTestManager;
 import com.relevantcodes.extentreports.LogStatus;
-import com.test.mystore.BaseTest;
+import com.test.BaseTest;
 
 public class LogUtil {
 

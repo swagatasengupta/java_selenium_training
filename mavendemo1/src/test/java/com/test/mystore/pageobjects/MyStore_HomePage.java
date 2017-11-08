@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.lib.util.LogUtil;
 import com.lib.util.extent.ExtentTestManager;
 import com.relevantcodes.extentreports.LogStatus;
-import com.test.mystore.BaseTest;
+import com.test.BaseTest;
 
 public class MyStore_HomePage extends BaseTest {
 

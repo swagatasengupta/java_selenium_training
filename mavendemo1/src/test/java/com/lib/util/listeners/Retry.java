@@ -3,7 +3,7 @@ package com.lib.util.listeners;
 import com.lib.genWeb.SelWebDriverUtil;
 import com.lib.util.extent.ExtentTestManager;
 import com.relevantcodes.extentreports.LogStatus;
-import com.test.mystore.BaseTest;
+import com.test.BaseTest;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

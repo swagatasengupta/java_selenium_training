@@ -1,6 +1,7 @@
 package com.lib.util.listeners;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.test.BaseTest;
 
 import java.util.Map;
 
@@ -10,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import com.test.mystore.BaseTest;
+
 import com.lib.genWeb.SelWebDriverUtil;
 import com.lib.util.LogUtil;
 import com.lib.util.extent.ExtentManager;

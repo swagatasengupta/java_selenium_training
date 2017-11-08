@@ -17,7 +17,7 @@ import com.lib.util.extent.ExtentManager;
 import com.lib.util.extent.ExtentTestManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
-import com.test.mystore.BaseTest;
+import com.test.BaseTest;
 import com.test.mystore.MyStoreUIWebTestData;
 import com.test.mystore.pageobjects.MyStore_CommonPage;
 import com.test.mystore.pageobjects.MyStore_HomePage;
