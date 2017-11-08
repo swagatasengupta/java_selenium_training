@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="5" failed="2" ignored="0" total="13" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MyStore TestSuite" duration-ms="82112" started-at="2017-11-08T13:48:21Z" finished-at="2017-11-08T13:49:43Z">
+    <groups>
+    </groups>
+    <test name="Smoke-nonUI-DummyTests" duration-ms="107" started-at="2017-11-08T13:48:21Z" finished-at="2017-11-08T13:48:21Z">
+      <class name="com.test.mystore.ui_tests.Test1">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f1_1()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="f1_1" duration-ms="16" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1_1 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f1_2()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="f1_2" duration-ms="4" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1_2 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="f1_3()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="f1_3" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test1.f1_3(Test1.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1_3 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="f1_3()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="f1_3" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test1.f1_3(Test1.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1014)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1215)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1_3 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="f1_3()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="f1_3" duration-ms="4" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test1.f1_3(Test1.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1014)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1215)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1_3 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test1@6b81ce95]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.test.mystore.ui_tests.Test1 -->
+      <class name="com.test.mystore.ui_tests.Test2">
+        <test-method status="PASS" signature="f2_beforeClass()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeClass" is-config="true" duration-ms="4" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeClass -->
+        <test-method status="PASS" signature="f2_beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeMethod -->
+        <test-method status="PASS" signature="f2_1()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_1" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_1 -->
+        <test-method status="PASS" signature="f2_beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeMethod -->
+        <test-method status="PASS" signature="f2_afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterMethod -->
+        <test-method status="SKIP" signature="f2_2()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_2" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test2.f2_2(Test2.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_2 -->
+        <test-method status="PASS" signature="f2_beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeMethod -->
+        <test-method status="PASS" signature="f2_afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterMethod -->
+        <test-method status="SKIP" signature="f2_2()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_2" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test2.f2_2(Test2.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1014)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1215)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_2 -->
+        <test-method status="PASS" signature="f2_beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeMethod -->
+        <test-method status="PASS" signature="f2_afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterMethod -->
+        <test-method status="PASS" signature="f2_beforeMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_beforeMethod -->
+        <test-method status="PASS" signature="f2_afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterMethod -->
+        <test-method status="PASS" signature="f2_afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterMethod -->
+        <test-method status="PASS" signature="f2_3()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_3" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_3 -->
+        <test-method status="FAIL" signature="f2_2()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_2" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Test2.f2_2(Test2.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1014)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1215)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_2 -->
+        <test-method status="PASS" signature="f2_afterClass()[pri:0, instance:com.test.mystore.ui_tests.Test2@2a798d51]" name="f2_afterClass" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2_afterClass -->
+      </class> <!-- com.test.mystore.ui_tests.Test2 -->
+    </test> <!-- Smoke-nonUI-DummyTests -->
+    <test name="Smoke-UIWeb-Chrome" duration-ms="34078" started-at="2017-11-08T13:48:21Z" finished-at="2017-11-08T13:48:55Z">
+      <class name="com.test.mystore.ui_tests.Login_Logout">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@32910148]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@32910148]" name="beforeMethod" is-config="true" duration-ms="4451" started-at="2017-11-08T19:18:21Z" finished-at="2017-11-08T19:18:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="t01_Login()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@32910148]" name="t01_Login" duration-ms="28800" started-at="2017-11-08T19:18:25Z" finished-at="2017-11-08T19:18:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t01_Login -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@32910148]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:54Z" finished-at="2017-11-08T19:18:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@32910148]" name="afterClass" is-config="true" duration-ms="799" started-at="2017-11-08T19:18:54Z" finished-at="2017-11-08T19:18:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.test.mystore.ui_tests.Login_Logout -->
+    </test> <!-- Smoke-UIWeb-Chrome -->
+    <test name="Smoke-UIWeb-Mozilla" duration-ms="81392" started-at="2017-11-08T13:48:22Z" finished-at="2017-11-08T13:49:43Z">
+      <class name="com.test.mystore.ui_tests.Login_Logout">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-11-08T19:18:22Z" finished-at="2017-11-08T19:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="beforeMethod" is-config="true" duration-ms="9675" started-at="2017-11-08T19:18:22Z" finished-at="2017-11-08T19:18:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mozilla]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="t01_Login()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="t01_Login" duration-ms="38794" started-at="2017-11-08T19:18:31Z" finished-at="2017-11-08T19:19:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.test.mystore.ui_tests.Login_Logout.t01_Login(Login_Logout.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t01_Login -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="beforeMethod" is-config="true" duration-ms="7281" started-at="2017-11-08T19:19:10Z" finished-at="2017-11-08T19:19:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mozilla]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:19:10Z" finished-at="2017-11-08T19:19:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="t01_Login()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="t01_Login" duration-ms="21326" started-at="2017-11-08T19:19:17Z" finished-at="2017-11-08T19:19:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t01_Login -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-08T19:19:39Z" finished-at="2017-11-08T19:19:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.mystore.ui_tests.Login_Logout@4470f8a6]" name="afterClass" is-config="true" duration-ms="4291" started-at="2017-11-08T19:19:39Z" finished-at="2017-11-08T19:19:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.test.mystore.ui_tests.Login_Logout -->
+    </test> <!-- Smoke-UIWeb-Mozilla -->
+  </suite> <!-- MyStore TestSuite -->
+</testng-results>

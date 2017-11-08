@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyStore WebUI Parallel TestSuite]">
+  <test name="Login Logout(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.test.mystore.ui_tests.Login_Logout">
+        <methods>
+          <include name="t01_Login"/>
+          <include name="afterMyStoreUIWebTest"/>
+          <include name="beforeMyStoreUIWebTest"/>
+          <include name="beforeClass"/>
+          <include name="afterMyStoreUIWebSuite"/>
+          <include name="t02_Logout"/>
+          <include name="beforeMyStoreUIWebSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.test.mystore.ui_tests.Login_Logout -->
+    </classes>
+  </test> <!-- Login Logout(failed) -->
+</suite> <!-- Failed suite [MyStore WebUI Parallel TestSuite] -->

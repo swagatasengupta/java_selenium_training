@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [MyStore WebUI TestSuite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.lib.util.listeners.TestListener"/>
+    <listener class-name="com.lib.util.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test name="Smoke-nonUI(failed)" parallel="tests">
+    <parameter name="testType" value="nonUI"/>
+    <classes>
+      <class name="com.test.mystore.ui_tests.Test2">
+        <methods>
+          <include name="f2_beforeMethod"/>
+          <include name="f2_afterMethod"/>
+          <include name="f2_2"/>
+          <include name="f2_beforeClass"/>
+          <include name="f2_afterClass"/>
+        </methods>
+      </class> <!-- com.test.mystore.ui_tests.Test2 -->
+      <class name="com.test.mystore.ui_tests.Test1">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="f3"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.test.mystore.ui_tests.Test1 -->
+    </classes>
+  </test> <!-- Smoke-nonUI(failed) -->
+  <test name="Smoke-Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="testType" value="UIWeb"/>
+    <classes>
+      <class name="com.test.mystore.ui_tests.Login_Logout">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="t01_Login"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.test.mystore.ui_tests.Login_Logout -->
+    </classes>
+  </test> <!-- Smoke-Chrome(failed) -->
+</suite> <!-- Failed suite [MyStore WebUI TestSuite] -->

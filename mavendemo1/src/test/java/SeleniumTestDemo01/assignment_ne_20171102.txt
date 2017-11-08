@@ -1,0 +1,6 @@
+•	Write 3 different TestNG classes. Each having BeforeClass, Test and AfterClass
+•	First one should log in to the http://automationpractice.com/index.php (use as many assertions or soft asserts as you want) and sign out.
+•	Second one login > go to My Addresses > Add an address > sign out.
+•	Third one should login > Check all the links under “My account” are available and enabled. Go to each one of them and assert those pages are opening. Finally, it should log out.
+•	Close browser after each test so that every test is independent of each other.
+

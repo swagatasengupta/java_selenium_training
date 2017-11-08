@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
-		<!-- <Property name="basePath">E:\\GIT\\java_selenium_training\\mavendemo1\\src\\test\\java\\com\\result\\logs</Property> -->
 		<Property name="basePath">./src/test/java/com/result/logs</Property>
 	</Properties>
 	<Appenders>
 		<RollingFile name="File" fileName="${basePath}/MyStoreApp.log" filePattern="${basePath}/MyStoreApp-%d{yyyy-MMM-dd}.log">
-			<PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level %c{2} -%msg%n"/>
+			<PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level %c{3} -%msg%n"/>
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-				<SizeBasedTriggeringPolicy size="2048 KB"/>
+				<SizeBasedTriggeringPolicy size="10 MB"/>
 			</Policies>
 		</RollingFile>
 		<Console name="Console">
@@ -20,7 +19,7 @@
         <Root level="trace">
 			<AppenderRef ref="File"/>
 		</Root>
-		<Logger name="mystore" level="trace" additivity="false">
+		<Logger name="mystore" level="info" additivity="false">
 			<AppenderRef ref="File"/>
 		</Logger>
 	</Loggers>
