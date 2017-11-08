@@ -49,8 +49,12 @@ public class LogUtil {
 			BaseTest.log.debug(msg + stackTrace);
 			ExtentTestManager.getTest().log(LogStatus.PASS, msg);
 			break;
+		case "FAIL":
+			BaseTest.log.error(msg + stackTrace);
+			ExtentTestManager.getTest().log(LogStatus.FAIL, msg);
+			break;
 		default:
-			BaseTest.log.trace(msg + stackTrace);
+			BaseTest.log.warn(msg + stackTrace);
 			break;
 		}
 	}
