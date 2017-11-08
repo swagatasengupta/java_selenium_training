@@ -68,6 +68,7 @@ public class Login_Logout extends BaseTest {
 			
 			String actMyAccPageHeader = cmn.elem_pageHeading.getText();
 			Assert.assertEquals(actMyAccPageHeader, "MY ACCOUNT");
+			SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of myaccount page");
 			LogUtil.log("PASS", "Logged in to the application successfully as "
 			+ prop.getProperty("userName")
 			+ " and verified MY ACCOUNT page is displayed");

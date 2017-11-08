@@ -81,7 +81,7 @@ public class CreateAddress extends BaseTest {
 		retVal = myacc.myStore_verifyAddedAddress(addrAlias);
 		Assert.assertTrue(retVal);
 		LogUtil.log("PASS",   "Successfully verified added address " + addrAlias);
-
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of addresses");
 	}
 
 	@AfterMethod

@@ -69,10 +69,11 @@ public class MyAcctLinkNavigations extends BaseTest {
 		retVal = myacc.myAccountNavigation("ORDER_HISTORY");
 		LogUtil.log("INFO", "Successfully logged in as " + prop.getProperty("userName")
 		+ " clicked on Order History on My Account page");
-
+		
 		Assert.assertTrue(retVal);
 		String navigationPageText = cmn.elem_navigationPage.getText().trim();
 		Assert.assertEquals(navigationPageText, "Order history");
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of oder history page");
 		cmn.btn_backToMyAccount.click();
 		LogUtil.log("PASS",  "Successfully navigated to Order History page and navigated back to My Account page");
 		
@@ -81,6 +82,7 @@ public class MyAcctLinkNavigations extends BaseTest {
 		Assert.assertTrue(retVal);
 		navigationPageText = cmn.elem_navigationPage.getText().trim();
 		Assert.assertEquals(navigationPageText, "Credit slips");
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of credit slips page");
 		cmn.btn_backToMyAccount.click();
 		LogUtil.log("PASS",  "Successfully navigated to Credit Slips page and navigated back to My Account page");
 
@@ -89,6 +91,7 @@ public class MyAcctLinkNavigations extends BaseTest {
 		Assert.assertTrue(retVal);
 		navigationPageText = cmn.elem_navigationPage.getText().trim();
 		Assert.assertEquals(navigationPageText, "My addresses");
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of addresses page");
 		cmn.btn_backToMyAccount.click();
 		LogUtil.log("PASS", "Successfully navigated to My Addresses page and navigated back to My Account page");
 
@@ -97,6 +100,7 @@ public class MyAcctLinkNavigations extends BaseTest {
 		Assert.assertTrue(retVal);
 		navigationPageText = cmn.elem_navigationPage.getText().trim();
 		Assert.assertEquals(navigationPageText, "Your personal information");
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of personal information page");
 		cmn.btn_backToMyAccount.click();
 		LogUtil.log("PASS", "Successfully navigated to Personal Information page and navigated back to My Account page");
 		
@@ -105,6 +109,7 @@ public class MyAcctLinkNavigations extends BaseTest {
 		Assert.assertTrue(retVal);
 		navigationPageText = cmn.elem_navigationPage.getText().trim();
 		Assert.assertEquals(navigationPageText, "My wishlists");
+		SelWebDriverUtil.takeScreenShotAndAttachToExtent(driver, LogStatus.INFO, "screenshot of wishlist page");
 		cmn.btn_backToMyAccount.click();
 		LogUtil.log("PASS", "Successfully navigated to My wishlists page and navigated back to My Account page");
 		
