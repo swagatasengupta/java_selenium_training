@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
-		<Property name="basePath">./src/test/java/com/result/logs</Property>
+		<Property name="basePath">./src/main/java/logs</Property>
 	</Properties>
 	<Appenders>
 		<RollingFile name="File" fileName="${basePath}/MyStoreApp.log" filePattern="${basePath}/MyStoreApp-%d{yyyy-MMM-dd}.log">
@@ -17,9 +17,12 @@
 	</Appenders>
 	<Loggers>
         <Root level="trace">
-			<AppenderRef ref="File"/>
+			<AppenderRef ref="Console"/>
 		</Root>
-		<Logger name="mystore" level="info" additivity="false">
+		<Logger name="log4jdemo.package1" level="warn" additivity="false">
+			<AppenderRef ref="Console"/>
+		</Logger>
+		<Logger name="testnglisteners" level="trace" additivity="false">
 			<AppenderRef ref="File"/>
 		</Logger>
 	</Loggers>

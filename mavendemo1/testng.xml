@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+	<listeners>
+		<listener class-name="testnglisteners.CustomITestListener"></listener>
+		<listener class-name="testnglisteners.AnnotationTransformerListener"></listener>
+	</listeners>
+
+  <test name="Listener Demo Test">
+  		<parameter name="browser" value="chrome"></parameter>
     <classes>
-<!--       <class name="SeleniumTestDemo01.WorkingWithListOfElementsDemo"/>
-      <class name="SeleniumTestDemo01.ElementDisplayedDemo"/>
-      <class name="SeleniumTestDemo01.GetTextDemo"/>
-      <class name="SeleniumTestDemo01.JUnitIntroduction"/>
-      <class name="SeleniumTestDemo01.RadioButtonsAndCheckBoxesDemo"/>
-      <class name="SeleniumTestDemo01.PageObjectModel"/>
-      <class name="SeleniumTestDemo01.GetAttributeDemo"/>
-      <class name="SeleniumTestDemo01.BasicElementActions"/>
-      <class name="SeleniumTestDemo01.ExplicitWaitDemo"/>
-      <class name="SeleniumTestDemo01.SeleniumTestJUnit"/>
-      <class name="SeleniumTestDemo01.MultipleSelectDemo"/>
-      <class name="SeleniumTestDemo01.ImplicitWaitDemo"/>
-      <class name="SeleniumTestDemo01.DropdownSelectDemo"/>
-      <class name="SeleniumTestDemo01.ElementStateDemo"/>
-      <class name="SeleniumTestDemo01.NavigatingBetweenPages"/> -->
+      <class name="testnglisteners.TestClass1"/>
+      <class name="testnglisteners.TestClass2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
