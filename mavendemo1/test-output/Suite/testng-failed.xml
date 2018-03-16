@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="testnglisteners.CustomITestListener"/>
+    <listener class-name="testnglisteners.AnnotationTransformerListener"/>
+  </listeners>
+  <test name="Listener Demo Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testnglisteners.TestClass2">
+        <methods>
+          <include name="testClass2_test1"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- testnglisteners.TestClass2 -->
+    </classes>
+  </test> <!-- Listener Demo Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

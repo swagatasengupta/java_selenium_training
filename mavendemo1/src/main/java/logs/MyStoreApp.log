@@ -1,0 +1,40 @@
+[16:55:21.309] INFO  testnglisteners.CustomITestListener -onStart ==> Test : Listener Demo Test
+[16:55:25.119] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass1_test1
+ Parameters: {browser=chrome}
+[16:55:34.775] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[16:56:22.766] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[16:57:10.491] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test2
+ Parameters: {browser=chrome}
+[16:57:42.200] INFO  testnglisteners.CustomITestListener -onFinish ==> Test : Listener Demo Test
+[17:08:55.326] INFO  testnglisteners.CustomITestListener -onStart ==> Test : Listener Demo Test
+[17:08:59.146] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass1_test1
+ Parameters: {browser=chrome}
+[17:09:09.246] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:09:36.881] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:10:03.696] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test2
+ Parameters: {browser=chrome}
+[17:11:13.866] INFO  testnglisteners.CustomITestListener -onFinish ==> Test : Listener Demo Test
+[17:19:16.442] INFO  testnglisteners.CustomITestListener -onStart ==> Test : Listener Demo Test
+[17:19:20.242] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass1_test1
+ Parameters: {browser=chrome}
+[17:19:30.096] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:19:57.264] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:20:23.594] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test2
+ Parameters: {browser=chrome}
+[17:20:35.201] INFO  testnglisteners.CustomITestListener -onFinish ==> Test : Listener Demo Test
+[17:25:08.832] INFO  testnglisteners.CustomITestListener -onStart ==> Test : Listener Demo Test
+[17:25:12.573] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass1_test1
+ Parameters: {browser=chrome}
+[17:25:22.513] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:25:49.931] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test1
+ Parameters: {browser=chrome}
+[17:26:16.746] INFO  testnglisteners.CustomITestListener -onTestStart: Listener Demo Test ==> testClass2_test2
+ Parameters: {browser=chrome}
+[17:26:29.243] INFO  testnglisteners.CustomITestListener -onFinish ==> Test : Listener Demo Test

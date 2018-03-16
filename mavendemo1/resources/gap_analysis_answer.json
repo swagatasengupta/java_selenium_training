@@ -1,0 +1,442 @@
+[
+   {
+      "BQ1N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You should consider automated build deployment."
+      }
+   },
+   {
+      "BQ1Y":{
+         "lvl_threshold":2,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you have implemented build automated deployment.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ1P":{
+         "lvl_threshold":1,
+         "lvl_adjustment":0,
+         "doing_well":"It is good that your build deployment is partially automated.",
+         "improvement":"Please consider full automation of build deployment for consistency."
+      }
+   },
+   {
+      "BQ2Y":{
+         "lvl_threshold":2,
+         "lvl_adjustment":0,
+         "doing_well":"You are able to recreate any build from source control.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ2N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"You should establish methods to organize the work and be able to recreate any build from source control."
+      }
+   },
+   {
+      "BQ3Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"You have defined process to deploy build on any target environment.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ3N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You need to have a defined process to deploy build on any target environment."
+      }
+   },
+   {
+      "BQ4Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you have integrated automated smoke tests with the build.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ4N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"You should consider integrating automated smoke tests with the build process."
+      }
+   },
+   {
+      "BQ5Y":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"It is a great practice to perform commit test locally before checking in, your developers are doing a good job!",
+         "improvement":""
+      }
+   },
+   {
+      "BQ5N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"Industry best practices recommend performing local commit level tests before checking in code. Please consider implementing this best practice."
+      }
+   },
+   {
+      "BQ6N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"For failed builds, it is not a good practice to leave the reason undetected. Along with reverting to previous working version, we recommend that you should perform a root cause analysis and address it as soon as possible."
+      }
+   },
+   {
+      "BQ6H":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you take build failure seriously, identify and address the root cause.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ6P":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"You are capable of reverting a failed build to previous working version.",
+         "improvement":"For failed builds, along with reverting to previous working version, we recommend that you should perform a root cause analysis and address it as soon as possible."
+      }
+   },
+   {
+      "BQ7D":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"Checking in code to trunk and main line daily is a great practice. Keep it up.",
+         "improvement":""
+      }
+   },
+   {
+      "BQ7E":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"Checking in code to trunk and main line multiple times in a week is good practice.",
+         "improvement":"Checking in code to trunk and main line multiple times in a week is good practice but try to check in daily so that risk of losing precious development effort is mitigated."
+      }
+   },
+   {
+      "BQ7W":{
+         "lvl_threshold":2,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"Checking in code to trunk and main line weekly can introduce a risk of losing precious development effort. We recommend checking in daily as a good practice."
+      }
+   },
+   {
+      "BQ7G":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"Checking in code to trunk and main line weekly with a frequency of more than a week is not a good practice. . We recommend checking in daily as a good practice."
+      }
+   },
+   {
+      "BQ8Y":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"It is a great practice to bring up build and integration issues in retrospective meetings and take corrective and preventive measures on them. Keep it up!",
+         "improvement":""
+      }
+   },
+   {
+      "BQ8N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"It is a great practice to bring up build and integration issues in retrospective meetings and take corrective and preventive measures on them. You may consider implementing this as a process."
+      }
+   },
+   {
+      "EQ1Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you are using automated deployment for all the environments",
+         "improvement":""
+      }
+   },
+   {
+      "EQ1N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"It is recommended that as per industry best practices, automated deployments should be done for all environments so that human error is minimal."
+      }
+   },
+   {
+      "EQ1P":{
+         "lvl_threshold":2,
+         "lvl_adjustment":-0.5,
+         "doing_well":"It is good that you are using automated deployment for at least some environments.",
+         "improvement":"ItYou are either doing partially automated deployment for all environments or you are doing fully automated deployment for some environments. It is highly recommended to have a consistent approach and use fully automated deployment for all environments."
+      }
+   },
+   {
+      "EQ2Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you are provisioning your environment from stored configuration information or code.",
+         "improvement":""
+      }
+   },
+   {
+      "EQ2N":{
+         "lvl_threshold":2,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"It is highly recommended that in order to avoid manual error in provisioning, and to provision environments fast and consistently, you should use infrastructure management through code."
+      }
+   },
+   {
+      "EQ2P":{
+         "lvl_threshold":2,
+         "lvl_adjustment":-0.5,
+         "doing_well":"It is good that you have started automating environment provisioning through code.",
+         "improvement":"Although you have  started automating environment provisioning through code, you should do it more consistently and avoid any manual process for reducing errors."
+      }
+   },
+   {
+      "EQ3Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"You are following matured process of putting the environment or application configurations scripts under version control.",
+         "improvement":""
+      }
+   },
+   {
+      "EQ3N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"It is highly recommended that the environment or application configurations scripts are put under version control. This will enable traceability and also you will be able to revert to an old working version quickly in case something changes or stops working due to new changes."
+      }
+   },
+   {
+      "EQ4Y":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"It is great that you are leveraging Continuous Delivery tools to orchestrate the deployments across multiple environments. Keep it up!",
+         "improvement":""
+      }
+   },
+   {
+      "EQ4N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You can leverage Continuous Delivery tools to orchestrate the deployments across multiple environments. This will not only save time but ensure consistency in deployment process and monitoring."
+      }
+   },
+   {
+      "EQ5Y":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"You are utilizing environment virtualization to provide a controlled and fully repeatable deployment and release process. Well done!",
+         "improvement":""
+      }
+   },
+   {
+      "EQ5N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.25,
+         "doing_well":"",
+         "improvement":"You may consider utilizing environment virtualization to provide a controlled and fully repeatable deployment and release process."
+      }
+   },
+   {
+      "RQ1Y":{
+         "lvl_threshold":2,
+         "lvl_adjustment":0,
+         "doing_well":"Having frequent, short and reliable releases is a great thing!",
+         "improvement":""
+      }
+   },
+   {
+      "RQ1N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"It is highly recommended that you follow frequent and short release cycles targeting small chunks of functionalities."
+      }
+   },
+   {
+      "RQ2Y":{
+         "lvl_threshold":2,
+         "lvl_adjustment":0,
+         "doing_well":"You have done great by establishing traceability between releases and requirements.",
+         "improvement":""
+      }
+   },
+   {
+      "RQ2N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"It is important to have traceability between releases and requirements. Please establish traceability."
+      }
+   },
+   {
+      "RQ3Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"You are conforming to the regulatory norms for change management and approval processes. Keep it up!",
+         "improvement":""
+      }
+   },
+   {
+      "RQ3N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You need to conform to the regulatory norms for change management and approval process to be compliant. Non-compliance may not only lead to financial loss but also a loss of reputation."
+      }
+   },
+   {
+      "RQ4Y":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"Your monitoring requirements are documented as well as enforced as a part of release plan. This goes a long way in matured practices. ",
+         "improvement":""
+      }
+   },
+   {
+      "RQ4N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You should start documenting and enforcing the monitoring needs as part of release plan. This is an indication of having matured processes. Also, this can give you heads-up in terms of potential issues lurking within the system."
+      }
+   },
+   {
+      "RQ5Y":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"Your delivery and operations teams are collaborating regularly with one common goal of managing and reducing cycle/ release times. This is great!",
+         "improvement":""
+      }
+   },
+   {
+      "RQ5N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"As a part of process maturity, it is recommended that your delivery and operation teams are regularly collaborating on innovations or ways to reduce release/ cycle time."
+      }
+   },
+   {
+      "TQ1E":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-2,
+         "doing_well":"",
+         "improvement":"While it is OK to do a round of exploratory tests manually. But in the fast paced development lifecycle, it is implicit that tests are automated to ensure fast feedback to the development team. You should seriously consider moving away from manual testing as much as possible for long term benefits."
+      }
+   },
+   {
+      "TQ1S":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-0.5,
+         "doing_well":"You are on the right track as you have started test automation. This is the need of the hour.",
+         "improvement":"Having some test automated is great. But try to automate more relevant tests so that you get greater ROI by executing them frequently."
+      }
+   },
+   {
+      "TQ1M":{
+         "lvl_threshold":2,
+         "lvl_adjustment":0,
+         "doing_well":"You have done the right thing by automating majority of the tests. You are either already reaping the benefits of automation or you will soon get it! Well done!",
+         "improvement":""
+      }
+   },
+   {
+      "TQ2Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"You are automating fast executing unit tests at commit level. With good test coverage, this will definitely help in reducing number of defects found during further tests.",
+         "improvement":""
+      }
+   },
+   {
+      "TQ2N":{
+         "lvl_threshold":2,
+         "lvl_adjustment":-1,
+         "doing_well":"",
+         "improvement":"You should definitely consider automating unit tests as much as possible. This will not only ensure greater code coverage, but also get you faster feedback in case something breaks at unit or component level."
+      }
+   },
+   {
+      "TQ3Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"If your developers or testers using ATDD or BDD approach to create automated tests, you are ahead in the game and chances of not having the right tests for the product are minimal. You business, dev and test team are on the same page, which is great!",
+         "improvement":""
+      }
+   },
+   {
+      "TQ3N":{
+         "lvl_threshold":1,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"It is highly likely that your business, test and development teams are not always in sync. By adapting to the ATDD and BDD approaches your business, development and testing teams will be more in sync. You may consider introducing these to the team."
+      }
+   },
+   {
+      "TQ4Y":{
+         "lvl_threshold":3,
+         "lvl_adjustment":0,
+         "doing_well":"If you are having automated acceptance tests integrated with your continuous delivery process, and they are triggered automatically, that is really a great thing to have. You can execute tests without manual supervision and it can assure improved feedback time.",
+         "improvement":""
+      }
+   },
+   {
+      "TQ4N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"Event triggered, automated acceptance tests are great assets which reduce need for human supervision and helps get much better ROI for the automation effort. It is strongly recommended to invest in an event triggered automated acceptance test suite."
+      }
+   },
+   {
+      "TQ5Y":{
+         "lvl_threshold":4,
+         "lvl_adjustment":0,
+         "doing_well":"You have futuristic vision of increasing efficiency of automated tests and hence you have automated non-functional tests like security and capacity tests. Way to go!",
+         "improvement":""
+      }
+   },
+   {
+      "TQ5N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"You may consider \"shifting-left\" and automating security and performance tests early in development life cycle. These will help you get a better understanding of the application health right through the project instead of diagnosing something big is amiss towards the fag-end of the project."
+      }
+   },
+   {
+      "TQ6Y":{
+         "lvl_threshold":5,
+         "lvl_adjustment":0,
+         "doing_well":"You have done a great job by defining quality gates that are enforced throughout different phases of continuous delivery process.",
+         "improvement":""
+      }
+   },
+   {
+      "TQ6N":{
+         "lvl_threshold":0,
+         "lvl_adjustment":-0.5,
+         "doing_well":"",
+         "improvement":"If you are truly trying to set up a continuous delivery pipeline, you should define quality gates for each phase of the pipeline. This way you can measure each and every input and output of each phase and take corrective or preventive actions based on solid data."
+      }
+   }
+]

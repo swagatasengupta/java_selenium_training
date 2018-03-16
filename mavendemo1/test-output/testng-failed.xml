@@ -1,46 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [MyStore TestSuite]" parallel="tests">
-  <listeners>
-    <listener class-name="com.lib.util.listeners.TestListener"/>
-    <listener class-name="com.lib.util.listeners.AnnotationTransformerListener"/>
-  </listeners>
-  <test name="Smoke-nonUI-DummyTests(failed)" parallel="tests">
-    <parameter name="testType" value="nonUI"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.test.mystore.ui_tests.Test2">
+      <class name="api_restassured.RestAssuredDemo001_GoogleMapAPI">
         <methods>
-          <include name="f2_beforeMethod"/>
-          <include name="f2_afterMethod"/>
-          <include name="f2_2"/>
-          <include name="f2_beforeClass"/>
-          <include name="f2_afterClass"/>
+          <include name="setup"/>
+          <include name="apitest003"/>
         </methods>
-      </class> <!-- com.test.mystore.ui_tests.Test2 -->
-      <class name="com.test.mystore.ui_tests.Test1">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="f1_3"/>
-          <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.test.mystore.ui_tests.Test1 -->
+      </class> <!-- api_restassured.RestAssuredDemo001_GoogleMapAPI -->
     </classes>
-  </test> <!-- Smoke-nonUI-DummyTests(failed) -->
-  <test name="Smoke-UIWeb-Mozilla(failed)" parallel="tests">
-    <parameter name="browser" value="mozilla"/>
-    <parameter name="testType" value="UIWeb"/>
-    <classes>
-      <class name="com.test.mystore.ui_tests.Login_Logout">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="t01_Login"/>
-          <include name="afterClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.test.mystore.ui_tests.Login_Logout -->
-    </classes>
-  </test> <!-- Smoke-UIWeb-Mozilla(failed) -->
-</suite> <!-- Failed suite [MyStore TestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

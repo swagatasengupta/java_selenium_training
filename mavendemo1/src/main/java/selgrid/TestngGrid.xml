@@ -1,0 +1,46 @@
+<suite name="TestSuite">
+<!-- 	<test name="FireFox Mac Test">
+		<parameters>
+			<parameter name="platform" value="Mac" />
+			<parameter name="browser" value="firefox" />
+			<parameter name="url" value="http://www.expedia.co.in" />
+		</parameters>
+		<classes>
+			<class name="selgrid.SeleniumGrid_ParallelTestFramework">
+			</class>
+		</classes>
+	</test> -->
+<!-- 	<test name="Chrome Windows Test">
+		<parameters>
+			<parameter name="platform" value="Windows" />
+			<parameter name="browser" value="chrome" />
+			<parameter name="url" value="http://www.expedia.co.in" />
+		</parameters>
+		<classes>
+			<class name="selgrid.SeleniumGrid_ParallelTestFramework">
+			</class>
+		</classes>
+	</test> -->
+	<test name="Edge Windows Test">
+		<parameters>
+			<parameter name="platform" value="Windows" />
+			<parameter name="browser" value="edge" />
+			<parameter name="url" value="http://www.expedia.co.in" />
+		</parameters>
+		<classes>
+			<class name="selgrid.SeleniumGrid_ParallelTestFramework">
+			</class>
+		</classes>
+	</test>
+<!-- 	<test name="Safari Mac Test">
+		<parameters>
+			<parameter name="platform" value="Mac" />
+			<parameter name="browser" value="safari" />
+			<parameter name="url" value="http://www.expedia.co.in" />
+		</parameters>
+		<classes>
+			<class name="selgrid.SeleniumGrid_ParallelTestFramework">
+			</class>
+		</classes>
+	</test> -->
+</suite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]">
+  <test name="Edge Windows Test(failed)">
+    <parameter name="browser" value="edge"/>
+    <parameter name="platform" value="Windows"/>
+    <parameter name="url" value="http://www.expedia.co.in"/>
+    <classes>
+      <class name="selgrid.SeleniumGrid_ParallelTestFramework">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="searchFlights"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- selgrid.SeleniumGrid_ParallelTestFramework -->
+    </classes>
+  </test> <!-- Edge Windows Test(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

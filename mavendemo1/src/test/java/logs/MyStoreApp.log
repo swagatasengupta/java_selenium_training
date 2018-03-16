@@ -1,0 +1,3 @@
+[13:43:55.960] WARN  log4jdemo.package2.Log4jDemoClass2 -Warning Message Logged
+[13:43:55.962] ERROR log4jdemo.package2.Log4jDemoClass2 -Error Message Logged
+[13:43:55.962] FATAL log4jdemo.package2.Log4jDemoClass2 -Fatal Message Logged

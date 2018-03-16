@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Priority TestSuite">
+	<test name="Proprity Test Demo">
+		<classes>
+			<class name="testng_priority.TestNG_PrioritiyTest2"></class>
+			<class name="testng_priority.TestNG_PrioritiyTest1"></class>
+		</classes>
+	</test>
+</suite>

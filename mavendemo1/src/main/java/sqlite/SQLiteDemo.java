@@ -1,11 +1,9 @@
 package sqlite;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -85,6 +83,7 @@ public class SQLiteDemo {
  
     	List<Object[]> records=new ArrayList<Object[]>();
     	
+    	
     	ResultSet rs = null;
         try {
              rs  = conn.createStatement().executeQuery(sqlQuery);
@@ -126,7 +125,8 @@ public class SQLiteDemo {
 				+ "newSQLiteDB.db";
 		createNewDatabase(newDBAbsPath);
 		
-		 * String dbpath = "test01.db"; File dbfile = new File(dbpath);
+		String dbpath = "test01.db";
+		File dbfile = new File(dbpath);
 		 
 		String tableName = "NewTable";
 		String tablefieldsAndConstraints = " id integer PRIMARY KEY,\n" + "	name text NOT NULL,\n"
@@ -169,6 +169,6 @@ public class SQLiteDemo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        */
+     */   
 	}
 }

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <parameter name="browser" value="param-val-not-found"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.mystore.ui_tests.LoginDemoPageFactory">
+      <class name="api_restassured.RestAssuredDemo001_GoogleMapAPI">
         <methods>
-          <include name="t01_LoginPageFactoryDemo"/>
-          <include name="beforeMethod"/>
-          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="apitest003"/>
         </methods>
-      </class> <!-- com.test.mystore.ui_tests.LoginDemoPageFactory -->
+      </class> <!-- api_restassured.RestAssuredDemo001_GoogleMapAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

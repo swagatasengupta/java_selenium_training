@@ -33,11 +33,11 @@ public class RegExDemo01 {
 		System.out.println("https://domainname.org".matches("^http[s]?://\\w+\\.(com|net|org)$")); // to check a URL is http or https and ends with .com, .org or .net
 		System.out.println("12:00 PM".matches("(1[0-2]|0?[1-9])\\:[0-5][0-9]\\s([aApP][mM])")); // Time format in AM/PM
 		System.out.println("0:00:00".matches("([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]")); // Time format in 24 hours
-		
+		System.out.println("192.168.1.100".matches("^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$")); // Time format in 24 hours
+		System.out.println("Welcome Test User1, Type: user".matches("Welcome.*, Type: user"));
 		
 		/*Replace examples*/
 		System.out.println("This+is+a+test".replaceAll("\\+"," ")); //replaces # by space
-		
 		String dateStr = "Today, <dd/mM/YY> is Diwali. Happy Diwali to all";
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/mm/yy");
 		LocalDateTime now = LocalDateTime.now();
