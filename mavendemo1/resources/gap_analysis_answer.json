@@ -180,7 +180,7 @@
          "lvl_threshold":2,
          "lvl_adjustment":-0.5,
          "doing_well":"It is good that you are using automated deployment for at least some environments.",
-         "improvement":"ItYou are either doing partially automated deployment for all environments or you are doing fully automated deployment for some environments. It is highly recommended to have a consistent approach and use fully automated deployment for all environments."
+         "improvement":"You are either doing partially automated deployment for all environments or you are doing fully automated deployment for some environments. It is highly recommended to have a consistent approach and use fully automated deployment for all environments."
       }
    },
    {
@@ -379,7 +379,7 @@
       "TQ3Y":{
          "lvl_threshold":3,
          "lvl_adjustment":0,
-         "doing_well":"If your developers or testers using ATDD or BDD approach to create automated tests, you are ahead in the game and chances of not having the right tests for the product are minimal. You business, dev and test team are on the same page, which is great!",
+         "doing_well":"If your developers or testers using ATDD or BDD approach to create automated tests, you are ahead in the game and chances of not having the right tests for the product are minimal. Your business, dev and test team are on the same page, which is great!",
          "improvement":""
       }
    },
