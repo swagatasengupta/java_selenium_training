@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo Cucumber Test Suite" parallel="tests" thread-count="2" >
+<!-- 	<listeners>
+		<listener class-name="testnglisteners.CustomITestListener"></listener>
+		<listener class-name="testnglisteners.AnnotationTransformerListener"></listener>
+	</listeners>
+ -->
+  <test name="Demo Cucumber Feature Set 1"  annotations="JDK" preserve-order="true">
+    <classes>
+      <class name="cucumber.CucumberRunnerFS1"/>
+    </classes>
+  </test>
+  <test name="Demo Cucumber Feature Set 2"  annotations="JDK" preserve-order="true">
+    <classes>
+      <class name="cucumber.CucumberRunnerFS2"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
