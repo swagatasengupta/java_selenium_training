@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverService;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +19,9 @@ public class Autocomplete {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
+		//GeckoDriverService service = new GeckoDriverService(null, 0, null, null);
 		driver = new FirefoxDriver();
+		//driver = 
 		baseUrl = "http://www.southwest.com/";
 
 		// Maximize the browser's window
