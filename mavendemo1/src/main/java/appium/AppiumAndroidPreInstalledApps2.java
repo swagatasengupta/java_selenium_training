@@ -35,7 +35,7 @@ public class AppiumAndroidPreInstalledApps2 {
 		
 		//If you are not sure about package and activity name, On command line type :
 		// (Open the application first)
-		// adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
+		// adb shell "dumpsys window windows | grep -E 'mCurrentFocus | mFocusedApp'"
 		
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "100");
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
